@@ -10,6 +10,7 @@
   --yellow: #ffbe51;
   --white: #ffffff;
   --gray: #757575;
+  --gray-bg: #e5e5e5;
   --black: #000000;
 }
 
@@ -84,6 +85,9 @@ main section.item-1 div.container-item-1 {
   grid-template-rows: 0.5fr 1fr;
 }
 main section.item-1 div.container-item-1 div.item-1-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main section.item-1 div.container-item-1 div.item-1-1 h2 {
   color: var(--gray);
@@ -100,7 +104,51 @@ main section.item-1 div.container-item-1 div.item-1-2 figure img {
   width: 100%;
 }
 
+main section.item-2 {
+  width: 100%;
+  background-color: var(--gray-bg);
+}
+main section.item-2 div.container-item-2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0px;
+}
+main section.item-2 div.container-item-2 h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+main section.item-2 div.container-item-2 div.itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+main section.item-2 div.container-item-2 div.itens div.item-card {
+  display: flex;
+  flex-direction: column;
+}
+main section.item-2 div.container-item-2 div.itens div.item-card figure {
+  width: 100%;
+}
+main section.item-2 div.container-item-2 div.itens div.item-card figure img {
+  width: 100%;
+}
+main section.item-2 div.container-item-2 div.itens div.item-card div.text {
+}
+main section.item-2 div.container-item-2 div.itens div.item-card div.text h3 {
+  font-size: 0.6rem;
+}
+main section.item-2 div.container-item-2 div.itens div.item-card div.text p {
+  font-size: 0.6rem;
+}
+
 @media (min-width: 768px) {
+  header div.container,
+  main section.item-1 div.container-item-1,
+  main section.item-2 div.container-item-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   header div.container nav {
     display: initial;
   }
@@ -112,9 +160,19 @@ main section.item-1 div.container-item-1 div.item-1-2 figure img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  main section.item-1 div.container-item-1 div.item-1-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  main section.item-1 div.container-item-1 div.item-1-1 h2 {
+    font-size: 1.5rem;
+  }
+  main section.item-2 div.container-item-2 div.itens div.item-card div.text h3 {
+    font-size: 1rem;
+  }
+  main section.item-2 div.container-item-2 div.itens div.item-card div.text p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main section.item-1 div.container-item-1 div.item-1-1 h2 {
+    font-size: 2rem;
   }
 }
