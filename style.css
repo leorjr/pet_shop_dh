@@ -66,11 +66,55 @@ header div.container i:hover {
   color: var(--gray);
 }
 
+main {
+  width: 100%;
+}
+
+main section.item-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+main section.item-1 div.container-item-1 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+main section.item-1 div.container-item-1 div.item-1-1 {
+}
+main section.item-1 div.container-item-1 div.item-1-1 h2 {
+  color: var(--gray);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+main section.item-1 div.container-item-1 div.item-1-2 {
+}
+
+main section.item-1 div.container-item-1 div.item-1-2 figure {
+  width: 100%;
+}
+main section.item-1 div.container-item-1 div.item-1-2 figure img {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   header div.container nav {
     display: initial;
   }
   header div.container i {
     display: none;
+  }
+  main section.item-1 div.container-item-1 {
+    padding: 30px 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  main section.item-1 div.container-item-1 div.item-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
